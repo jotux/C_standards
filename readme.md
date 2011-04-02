@@ -10,9 +10,7 @@ descriptive and specific.
 >Example 1.1a - Acceptable file names for code and header files
 
     wireless_comm.c
-
     hardware_config.h
-
     printer.c
 
 #### 1.2 Functions
@@ -24,13 +22,11 @@ underscores and have names that include the variable(s) they access.
 >Example 1.2a - Acceptable regular function names
 
     MyUsefulFunction ()
-
     ParseData ()
 
 >Example 1.2b - Acceptable accessor/mutator function names
 
     set_error_count ()
-
     get_error_count ()
 
 #### 1.3 Variables
@@ -42,13 +38,11 @@ function. Do not use abbreviations unless they are universally understood.
 >Example 1.3a - Acceptable variable names
 
     baseline_average
-
     local_interrupt_count
 
 >Example 1.3b - Unacceptable variable names
 
     bline_av
-
     int_cnt
 
 #### 1.4 Types
@@ -58,11 +52,8 @@ Type names are mixed-case with no underscores.
 >Example 1.4a - Acceptable type names
 
     class MyUsefulClass { …
-
     struct MyStruct { …
-
-    typedef … SpecialType;
-    
+    typedef … SpecialType;    
     enum MyErrors { …
 
 #### 1.5 Defines and Macros
@@ -72,13 +63,11 @@ Defines and macros are to be all uppercase with underscores separating words.
 >Example 1.5a - Acceptable define names
 
     #define MAX_ALLOWED_ERRORS 3
-
     #define DEFAULT_TIMEOUT_SECONDS 10
 
 >Example 1.5b - Acceptable macro names
 
     #define OPEN_PORT () {code…}
-
     #define GREEN_LED_OFF () {code…}
 
 ### 2 Formatting
@@ -101,12 +90,9 @@ related. This makes variables and code easier to find and document.
 
 >Example 2.2b - acceptable declaration of multiple variables
 
-    unsigned char a = 0;
-    
-    unsigned char b = 0;
-    
-    unsigned char c = 0;
-    
+    unsigned char a = 0;    
+    unsigned char b = 0;    
+    unsigned char c = 0;    
     unsigned char d = 0;
 
 #### 2.3 Parenthesis, Argument, and Operator spacing
