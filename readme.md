@@ -11,13 +11,13 @@
 File names are to be all lowercase and use underscores (_).Names should be
 descriptive and specific.
 
-Example 1.1a - Acceptable file names for code and header files
+>Example 1.1a - Acceptable file names for code and header files
 
-wireless_comm.c
+    wireless_comm.c
 
-hardware_config.h
+    hardware_config.h
 
-printer.c
+    printer.c
 
 #### 1.2 Functions
 
@@ -25,17 +25,17 @@ Regular Function names are mixed-case with no underscores. Functions that get
 or set specific variables (accessors or mutators) are lowercase with
 underscores and have names that include the variable(s) they access.
 
-Example 1.2a - Acceptable regular function names
+>Example 1.2a - Acceptable regular function names
 
-MyUsefulFunction ()
+    MyUsefulFunction ()
 
-ParseData ()
+    ParseData ()
 
-Example 1.2b - Acceptable accessor/mutator function names
+>Example 1.2b - Acceptable accessor/mutator function names
 
-set_error_count ()
+    set_error_count ()
 
-get_error_count ()
+    get_error_count ()
 
 #### 1.3 Variables
 
@@ -43,42 +43,47 @@ Variables are all lowercase with underscores to separate words.Names should be
 related to their function, clear, and as long as is needed to express their
 function. Do not use abbreviations unless they are universally understood.
 
-Example 1.3a - Acceptable variable names
+>Example 1.3a - Acceptable variable names
 
-baseline_average
+    baseline_average
 
-local_interrupt_count
+    local_interrupt_count
 
-Example 1.3b - Unacceptable variable names
+>Example 1.3b - Unacceptable variable names
 
-bline_av
+    bline_av
 
-int_cnt
+    int_cnt
 
 #### 1.4 Types
 
 Type names are mixed-case with no underscores.
 
-Example 1.4a - Acceptable type names
+>Example 1.4a - Acceptable type names
 
-class MyUsefulClass { …struct MyStruct { …typedef … SpecialType;enum MyErrors
-{ …
+    class MyUsefulClass { …
+
+    struct MyStruct { …
+
+    typedef … SpecialType;
+    
+    enum MyErrors { …
 
 #### 1.5 Defines and Macros
 
 Defines and macros are to be all uppercase with underscores separating words.
 
-Example 1.5a - Acceptable define names
+>Example 1.5a - Acceptable define names
 
-\#define MAX_ALLOWED_ERRORS 3
+    \#define MAX_ALLOWED_ERRORS 3
 
-\#define DEFAULT_TIMEOUT_SECONDS 10
+    \#define DEFAULT_TIMEOUT_SECONDS 10
 
-Example 1.5b - Acceptable macro names
+>Example 1.5b - Acceptable macro names
 
-\#define OPEN_PORT () {code…}
+    \#define OPEN_PORT () {code…}
 
-\#define GREEN_LED_OFF () {code…}
+    \#define GREEN_LED_OFF () {code…}
 
 ### 2 Formatting
 
@@ -94,14 +99,19 @@ consistent from one computer to the next and print properly.
 Only one statement is allowed per line unless the statements are very closely
 related. This makes variables and code easier to find and document.
 
-Example 2.2a - unacceptable declaration of multiple variables on one line
+>Example 2.2a - unacceptable declaration of multiple variables on one line
 
-unsigned char a, b, c, d;
+    unsigned char a, b, c, d;
 
-Example 2.2b - acceptable declaration of multiple variables
+>Example 2.2b - acceptable declaration of multiple variables
 
-unsigned char a = 0;unsigned char b = 0;unsigned char c = 0;unsigned char d =
-0;
+    unsigned char a = 0;
+    
+    unsigned char b = 0;
+    
+    unsigned char c = 0;
+    
+    unsigned char d = 0;
 
 #### 2.3 Parenthesis, Argument, and Operator spacing
 
@@ -109,13 +119,13 @@ Spaces should appear on both sides of parenthesis (except at the end of a
 line). Operators should have a space on either side of them. Operators should
 not have a space between themselves and the argument they operate on.
 
-Example 2.3a - Assignment with multiple operators, arguments, and parenthesis.
+>Example 2.3a - Assignment with multiple operators, arguments, and parenthesis.
 
-foo = ((bar1 | bar2) & bar3) / bar4;
+    foo = ((bar1 | bar2) & bar3) / bar4;
 
-Example 2.3b - Operator spacing
+>Example 2.3b - Operator spacing
 
-foo = bar1 + ~bar2 - (bar3 * bar4);
+    foo = bar1 + ~bar2 - (bar3 * bar4);
 
 #### 2.4 while, do while, and for loops
 
@@ -123,46 +133,46 @@ All code statements within loops will be encompassed by brackets even if they
 are single statements. Comments should be added to closing braces of loops to
 document where the closing brace originates.
 
-Example 2.4a - while loop formatting
+>Example 2.4a - while loop formatting
 
-while ((a < b) || (b < c))   // comment
-{
-   code…
-}    // end while
+    while ((a < b) || (b < c))   // comment
+    {
+       code…
+    }    // end while
 
-Example 2.4b - do while loop formatting
+>Example 2.4b - do while loop formatting
 
-do
-{
-   code…
-}while ((a < b) && (b < c));    // comment
+    do
+    {
+       code…
+    }while ((a < b) && (b < c));    // comment
 
-Example 2.4c - for loop formatting
+>Example 2.4c - for loop formatting
 
-for (a = 0;a < MAX_LOOP_CNT;a += LOOP_INC)    // comment
-{
-   code…
-}    //end for loop
+    for (a = 0;a < MAX_LOOP_CNT;a += LOOP_INC)    // comment
+    {
+       code…
+    }    //end for loop
 
-Example 2.4d - A while loop with a single line of associated code
+>Example 2.4d - A while loop with a single line of associated code
 
-while (a < b)    // comment
-{
-   a++;
-}    // end while
+    while (a < b)    // comment
+    {
+       a++;
+    }    // end while
 
 Empty loops should not be terminated with a single semicolon.Use brackets with
 associated comments explaining why the loop has no functioning code or use
 continue.
 
-Example 2.4e - while loops with no body
+>Example 2.4e - while loops with no body
 
-while (condition)
-{
-    // wait for this condition to return false
-}
+    while (condition)
+    {
+        // wait for this condition to return false
+    }
 
-while (condition) continue;    // comment
+    while (condition) continue;    // comment
 
 #### 2.5 if, else if, and else statements
 
@@ -170,27 +180,27 @@ All code statements within if statements will be encompassed by brackets even
 if they are single statements. Comments should be added to closing braces of
 if statements to document where the closing brace originates.
 
-Example 2.5a - if, if-else, and else statement formatting
+>Example 2.5a - if, if-else, and else statement formatting
 
-if (a == b)         // comment
-{
-   code…
-}
-else if (a < b)     // comment
-{
-   code…
-}
-else                // comment
-{  
-   code…
-}    // end a==b if
+    if (a == b)         // comment
+    {
+       code…
+    }
+    else if (a < b)     // comment
+    {
+       code…
+    }
+    else                // comment
+    {  
+       code…
+    }    // end a==b if
 
-Example 2.5b - An if statement with a single line of associated code
+>Example 2.5b - An if statement with a single line of associated code
 
-if (a < b)    // comment
-{
-   a++;
-}
+    if (a < b)    // comment
+    {
+       a++;
+    }
 
 #### 2.6 switch statements
 
@@ -198,34 +208,34 @@ Switch statements are to have the case statements indented one level out from
 the switch. Fall-throughs must be clearly documented. Every case statement
 must contain a default case.
 
-Example 2.6a - A switch statement with multiple cases including a fall-through
+>Example 2.6a - A switch statement with multiple cases including a fall-through
 
-Switch (foo){
-
-   case bar1:    // comment  
-       code…  
-       break;  
-   case bar2:    // OMG FALL THROUGH  
-       code…  
-   case bar3:    // comment  
-       code…  
-       break;  
-   case default:  
-       break;}    // end switch foo
+    Switch (foo)
+    {
+       case bar1:    // comment  
+           code…  
+           break;  
+       case bar2:    // OMG FALL THROUGH  
+           code…  
+       case bar3:    // comment  
+           code…  
+           break;  
+       case default:  
+           break;
+    }    // end switch foo
 
 #### 2.7 Ternary operator
 
 Ternary operators are sometimes useful in making code concise and readable. If
 possible, try to restrict ternary operations to single lines.
 
-Example 2.7a - acceptable ternary usage
+>Example 2.7a - acceptable ternary usage
 
-foo = (bar > 10) ? bar = 0 : bar++;
+    foo = (bar > 10) ? bar = 0 : bar++;
 
 #### 2.8 Commenting
 
-Use either // or /* */, as long as you are consistent. // is much more
-common for C commenting.
+Use either // or /* */, as long as you are consistent. // is much more common for C commenting.
 
 ### 3 Documentation
 
@@ -249,10 +259,10 @@ string TODO in all caps, followed by the name of the programmer who made the
 comment. TODO comments provide an easy and searchable way to document code
 you'd like to improve at a later time.
 
-Example 3.3a - correct TODO comment usage
+>Example 3.3a - correct TODO comment usage
 
-// TODO(Joe): remove equation here and use lookup table instead// TODO(Bob):
-add exception handling to this loop
+    // TODO(Joe): remove equation here and use lookup table instead
+    // TODO(Bob): add exception handling to this loop
 
 ### 4 Language Use
 
@@ -263,13 +273,13 @@ using macros are associated with not using brackets to encompass them. Macro
 use should be avoided whenever possible. If you need a macro-like
 functionality use inline functions instead.
 
-Example 4.1a - A correctly formatted macro to return the maximum of two values
+>Example 4.1a - A correctly formatted macro to return the maximum of two values
 
-\#define MAX(a,b) {(a > b) ? a : b;}
+    \#define MAX(a,b) {(a > b) ? a : b;}
 
-Example 4.1b - The same functionality implemented as an inline function
+>Example 4.1b - The same functionality implemented as an inline function
 
-inline int max(int a, int b){return a > b ? a : b;}
+    inline int max(int a, int b){return a > b ? a : b;}
 
 #### 4.2 Magic numbers
 
@@ -281,9 +291,9 @@ exceptions to this rule, such as code specific to a piece of hardware, but
 generally all numbers should be defined in the header file associated with a
 specific C file.
 
-Example 4.2a - Correct use of definition instead of a Magic number
+>Example 4.2a - Correct use of definition instead of a Magic number
 
-if (var <= MINIMUM_SPECIFIC_THRESHOLD)
+    if (var <= MINIMUM_SPECIFIC_THRESHOLD)
 
 #### 4.3 Hardware-specific code
 
@@ -293,10 +303,10 @@ defining all hardware interaction, though sometimes you will use imported
 libraries with their own associated hardware configuration. The only exception
 to this rule is for functions that initialize hardware.
 
-Example 4.3a - Correctly defining hardware
+>Example 4.3a - Correctly defining hardware
 
-\#define RED_LED_PORT     P1OUT
-\#define RED_LED_PIN      BIT0
+    \#define RED_LED_PORT     P1OUT
+    \#define RED_LED_PIN      BIT0
 
 #### 4.4 Header files
 
@@ -309,13 +319,12 @@ files explains how the code works. All header files will have \#define guards
 to prevent multiple inclusions. The format of the symbol name should be
 FILENAME_H.
 
-Example 4.4a - #define guard for hardware_init.h
+>Example 4.4a - #define guard for hardware_init.h
 
-\#ifndef HARDWARE_INIT_H
-
-\#define HARDWARE_INIT_H
-…
-\#endif //HARDWARE_INIT_H
+    \#ifndef HARDWARE_INIT_H    
+    \#define HARDWARE_INIT_H
+    …
+    \#endif //HARDWARE_INIT_H
 
 #### 4.5 Initialize all variables
 
