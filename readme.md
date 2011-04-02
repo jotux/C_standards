@@ -70,11 +70,13 @@ Defines and macros are to be all uppercase with underscores separating words.
 
 Example 1.5a - Acceptable define names
 
-#define MAX_ALLOWED_ERRORS 3#define DEFAULT_TIMEOUT_SECONDS 10
+\#define MAX_ALLOWED_ERRORS 3
+\#define DEFAULT_TIMEOUT_SECONDS 10
 
 Example 1.5b - Acceptable macro names
 
-#define OPEN_PORT () {code…}#define GREEN_LED_OFF () {code…}
+\#define OPEN_PORT () {code…}
+\#define GREEN_LED_OFF () {code…}
 
 ### 2 Formatting
 
@@ -248,7 +250,7 @@ functionality use inline functions instead.
 
 Example 4.1a - A correctly formatted macro to return the maximum of two values
 
-#define MAX(a,b) {(a > b) ? a : b;}
+\#define MAX(a,b) {(a > b) ? a : b;}
 
 Example 4.1b - The same functionality implemented as an inline function
 
@@ -278,7 +280,8 @@ to this rule is for functions that initialize hardware.
 
 Example 4.3a - Correctly defining hardware
 
-#define RED_LED_PORT     P1OUT#define RED_LED_PIN      BIT0
+\#define RED_LED_PORT     P1OUT
+\#define RED_LED_PIN      BIT0
 
 #### 4.4 Header files
 
@@ -287,15 +290,16 @@ special source files that contain your main function. Header files contain
 function prototypes, defines, macros, and the associated documentation on how
 to use the functions in the associated C file. Remember, documentation within
 header files explains how to use the functions and documentation in the C
-files explains how the code works. All header files will have #define guards
+files explains how the code works. All header files will have \#define guards
 to prevent multiple inclusions. The format of the symbol name should be
 FILENAME_H.
 
 Example 4.4a - #define guard for hardware_init.h
 
-#ifndef HARDWARE_INIT_H#define HARDWARE_INIT_H
+\#ifndef HARDWARE_INIT_H
+\#define HARDWARE_INIT_H
 
-…#endif //HARDWARE_INIT_H
+…\#endif //HARDWARE_INIT_H
 
 #### 4.5 Initialize all variables
 
