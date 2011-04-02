@@ -71,11 +71,13 @@ Defines and macros are to be all uppercase with underscores separating words.
 Example 1.5a - Acceptable define names
 
 \#define MAX_ALLOWED_ERRORS 3
+
 \#define DEFAULT_TIMEOUT_SECONDS 10
 
 Example 1.5b - Acceptable macro names
 
 \#define OPEN_PORT () {code…}
+
 \#define GREEN_LED_OFF () {code…}
 
 ### 2 Formatting
@@ -123,27 +125,31 @@ document where the closing brace originates.
 
 Example 2.4a - while loop formatting
 
-while ((a < b) || (b < c))   // comment{
-
-   code…}    // end while
+while ((a < b) || (b < c))   // comment
+{
+   code…
+}    // end while
 
 Example 2.4b - do while loop formatting
 
-do{
-
-   code…}while ((a < b) && (b < c));    // comment
+do
+{
+   code…
+}while ((a < b) && (b < c));    // comment
 
 Example 2.4c - for loop formatting
 
-for (a = 0;a < MAX_LOOP_CNT;a += LOOP_INC)    // comment{
-
-   code…}    //end for loop
+for (a = 0;a < MAX_LOOP_CNT;a += LOOP_INC)    // comment
+{
+   code…
+}    //end for loop
 
 Example 2.4d - A while loop with a single line of associated code
 
-while (a < b)    // comment{
-
-   a++;}    // end while
+while (a < b)    // comment
+{
+   a++;
+}    // end while
 
 Empty loops should not be terminated with a single semicolon.Use brackets with
 associated comments explaining why the loop has no functioning code or use
@@ -151,9 +157,10 @@ continue.
 
 Example 2.4e - while loops with no body
 
-while (condition){
-
-   // wait for this condition to return false}
+while (condition)
+{
+    // wait for this condition to return false
+}
 
 while (condition) continue;    // comment
 
@@ -165,17 +172,25 @@ if statements to document where the closing brace originates.
 
 Example 2.5a - if, if-else, and else statement formatting
 
-if (a == b)         // comment{
-
-   code…}else if (a < b)     // comment{  
-   code…}else                // comment{  
-   code…}    // end a==b if
+if (a == b)         // comment
+{
+   code…
+}
+else if (a < b)     // comment
+{
+   code…
+}
+else                // comment
+{  
+   code…
+}    // end a==b if
 
 Example 2.5b - An if statement with a single line of associated code
 
-if (a < b)    // comment{
-
-   a++;}
+if (a < b)    // comment
+{
+   a++;
+}
 
 #### 2.6 switch statements
 
@@ -297,9 +312,10 @@ FILENAME_H.
 Example 4.4a - #define guard for hardware_init.h
 
 \#ifndef HARDWARE_INIT_H
-\#define HARDWARE_INIT_H
 
-…\#endif //HARDWARE_INIT_H
+\#define HARDWARE_INIT_H
+…
+\#endif //HARDWARE_INIT_H
 
 #### 4.5 Initialize all variables
 
