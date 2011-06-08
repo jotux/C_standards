@@ -4,7 +4,7 @@
 
 #### 1.1 Files
 
-File names are to be all lowercase and use underscores (_).Names should be
+File names are to be all lowercase and use underscores (_). Names shall be
 descriptive and specific.
 
 >Example 1.1a - Acceptable file names for code and header files
@@ -21,17 +21,17 @@ underscores and have names that include the variable(s) they access.
 
 >Example 1.2a - Acceptable regular function names
 
-    MyUsefulFunction ()
-    ParseData ()
+    MyUsefulFunction()
+    ParseData()
 
 >Example 1.2b - Acceptable accessor/mutator function names
 
-    set_error_count ()
-    get_error_count ()
+    set_error_count()
+    get_error_count()
 
 #### 1.3 Variables
 
-Variables are all lowercase with underscores to separate words.Names should be
+Variables shall be all lowercase with underscores to separate words. Names should be
 related to their function, clear, and as long as is needed to express their
 function. Do not use abbreviations unless they are universally understood.
 
@@ -74,15 +74,15 @@ Defines and macros are to be all uppercase with underscores separating words.
 
 #### 2.1 Spaces instead of tabs
 
-Spaces should be used at all times instead of tabs. Tabs should be
+Spaces shall be used at all times instead of tabs. Tabs should be
 replaced with FOUR(4) spaces. Most editors have an option to convert
 tabs to spaces. Using spaces instead of tabs ensures that code will look
 consistent from one computer to the next and print properly.
 
 #### 2.2 One statement per line
 
-Only one statement is allowed per line unless the statements are very closely
-related. This makes variables and code easier to find and document.
+Only one statement is allowed per line. This makes variables and code 
+easier to find and document.
 
 >Example 2.2a - unacceptable declaration of multiple variables on one line
 
@@ -97,8 +97,8 @@ related. This makes variables and code easier to find and document.
 
 #### 2.3 Parenthesis, Argument, and Operator spacing
 
-Spaces should appear on both sides of parenthesis (except at the end of a
-line). Operators should have a space on either side of them. Operators should
+Spaces shall appear on both sides of parenthesis (except at the end of a
+line). Operators shall have a space on either side of them. Operators shall
 not have a space between themselves and the argument they operate on.
 
 >Example 2.3a - Assignment with multiple operators, arguments, and parenthesis.
@@ -111,7 +111,7 @@ not have a space between themselves and the argument they operate on.
 
 #### 2.4 while, do while, and for loops
 
-All code statements within loops will be encompassed by brackets even if they
+All code statements within loops shall be encompassed by brackets even if they
 are single statements. Comments should be added to closing braces of loops to
 document where the closing brace originates.
 
@@ -143,7 +143,7 @@ document where the closing brace originates.
        a++;
     }    // end while
 
-Empty loops should not be terminated with a single semicolon.Use brackets with
+Empty loops shall not be terminated with a single semicolon. Use brackets with
 associated comments explaining why the loop has no functioning code or use
 continue.
 
@@ -158,7 +158,7 @@ continue.
 
 #### 2.5 if, else if, and else statements
 
-All code statements within if statements will be encompassed by brackets even
+All code statements within if statements shall be encompassed by brackets even
 if they are single statements. Comments should be added to closing braces of
 if statements to document where the closing brace originates.
 
@@ -213,7 +213,7 @@ possible, try to restrict ternary operations to single lines.
 
 >Example 2.7a - acceptable ternary usage
 
-    foo = (bar > 10) ? bar = 0 : bar++;
+    foo = (bar > 10) ? 0 : 1;
 
 #### 2.8 Commenting
 
@@ -223,7 +223,7 @@ Use either // or /* */, as long as you are consistent. // is much more common fo
 
 #### 3.1 Files
 
-The first line of every file should indicate the start of the file; the last
+The first line of every file shall indicate the start of the file; the last
 line should indicate the end.
 
 Generally .h files will have a general overview of the code and how to use it.
@@ -250,7 +250,7 @@ you'd like to improve at a later time.
 
 #### 4.1 Macros
 
-Macros will always be encompassed by brackets. Many problems that arise from
+Macros shall always be encompassed by brackets. Many problems that arise from
 using macros are associated with not using brackets to encompass them. Macro
 use should be avoided whenever possible. If you need a macro-like
 functionality use inline functions instead.
@@ -261,7 +261,10 @@ functionality use inline functions instead.
 
 >Example 4.1b - The same functionality implemented as an inline function
 
-    inline int max(int a, int b){return a > b ? a : b;}
+    inline int max(int a, int b)
+    {
+        return a > b ? a : b;
+    }
 
 #### 4.2 Magic numbers
 
@@ -312,7 +315,11 @@ FILENAME_H.
 
 All variables must be initialized, always.
 
-#### 4.6 Consistency
+#### 4.6 Boolean Conditionals
+
+All boolean conditionals shall be encompassed by parenthesis to prevent operator-ordering errors.
+
+#### 4.7 Consistency
 
 When working on code that follows a different style maintain the coding
 style of the code you are working on.
