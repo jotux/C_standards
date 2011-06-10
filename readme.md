@@ -67,8 +67,8 @@ Defines and macros are to be all uppercase with underscores separating words.
 
 >Example 1.5b - Acceptable macro names
 
-    #define OPEN_PORT () {code…}
-    #define GREEN_LED_OFF () {code…}
+    #define OPEN_PORT() {code…}
+    #define GREEN_LED_OFF() {code…}
 
 ### 2 Formatting
 
