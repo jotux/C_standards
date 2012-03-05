@@ -4,8 +4,7 @@
 
 #### 1.1 Files
 
-File names are to be all lowercase and use underscores (_). Names shall be
-descriptive and specific.
+File names are to be all lowercase and use underscores (_). Names shall be descriptive and specific.
 
 >Example 1.1a - Acceptable file names for code and header files
 
@@ -15,9 +14,7 @@ descriptive and specific.
 
 #### 1.2 Functions
 
-Regular Function names are mixed-case with no underscores. Functions that get
-or set specific variables (accessors or mutators) are lowercase with
-underscores and have names that include the variable(s) they access.
+Regular Function names are mixed-case with no underscores. Functions that get or set specific variables (accessors or mutators) are lowercase with underscores and have names that include the variable(s) they access.
 
 >Example 1.2a - Acceptable regular function names
 
@@ -31,9 +28,7 @@ underscores and have names that include the variable(s) they access.
 
 #### 1.3 Variables
 
-Variables shall be all lowercase with underscores to separate words. Names should be
-related to their function, clear, and as long as is needed to express their
-function. Do not use abbreviations unless they are universally understood.
+Variables shall be all lowercase with underscores to separate words. Names should be related to their function, clear, and as long as is needed to express their function. Do not use abbreviations unless they are universally understood.
 
 >Example 1.3a - Acceptable variable names
 
@@ -74,15 +69,11 @@ Defines and macros are to be all uppercase with underscores separating words.
 
 #### 2.1 Spaces instead of tabs
 
-Spaces shall be used at all times instead of tabs. Tabs should be
-replaced with FOUR(4) spaces. Most editors have an option to convert
-tabs to spaces. Using spaces instead of tabs ensures that code will look
-consistent from one computer to the next and print properly.
+Spaces shall be used at all times instead of tabs. Tabs should be replaced with FOUR(4) spaces. Most editors have an option to convert tabs to spaces. Using spaces instead of tabs ensures that code will look consistent from one computer to the next and print properly.
 
 #### 2.2 One statement per line
 
-Only one statement is allowed per line. This makes variables and code 
-easier to find and document.
+Only one statement is allowed per line. This makes variables and code easier to find and document.
 
 >Example 2.2a - unacceptable declaration of multiple variables on one line
 
@@ -97,9 +88,7 @@ easier to find and document.
 
 #### 2.3 Parenthesis, Argument, and Operator spacing
 
-Spaces shall appear on both sides of parenthesis (except at the end of a
-line). Operators shall have a space on either side of them. Operators shall
-not have a space between themselves and the argument they operate on.
+Spaces shall appear on both sides of parenthesis (except at the end of a line). Operators shall have a space on either side of them. Operators shall not have a space between themselves and the argument they operate on.
 
 >Example 2.3a - Assignment with multiple operators, arguments, and parenthesis.
 
@@ -111,9 +100,7 @@ not have a space between themselves and the argument they operate on.
 
 #### 2.4 while, do while, and for loops
 
-All code statements within loops shall be encompassed by brackets even if they
-are single statements. Comments should be added to closing braces of loops to
-document where the closing brace originates.
+All code statements within loops shall be encompassed by brackets even if they are single statements. Comments should be added to closing braces of loops to document where the closing brace originates.
 
 >Example 2.4a - while loop formatting
 
@@ -143,9 +130,7 @@ document where the closing brace originates.
        a++;
     }    // end while
 
-Empty loops shall not be terminated with a single semicolon. Use brackets with
-associated comments explaining why the loop has no functioning code or use
-continue.
+Empty loops shall not be terminated with a single semicolon. Use brackets with associated comments explaining why the loop has no functioning code or use continue.
 
 >Example 2.4e - while loops with no body
 
@@ -158,9 +143,7 @@ continue.
 
 #### 2.5 if, else if, and else statements
 
-All code statements within if statements shall be encompassed by brackets even
-if they are single statements. Comments should be added to closing braces of
-if statements to document where the closing brace originates.
+All code statements within if statements shall be encompassed by brackets even if they are single statements. Comments should be added to closing braces of if statements to document where the closing brace originates.
 
 >Example 2.5a - if, if-else, and else statement formatting
 
@@ -186,9 +169,7 @@ if statements to document where the closing brace originates.
 
 #### 2.6 switch statements
 
-Switch statements are to have the case statements indented one level out from
-the switch. Fall-throughs must be clearly documented. Every case statement
-must contain a default case.
+Switch statements are to have the case statements indented one level out from the switch. Fall-throughs must be clearly documented. A default case is recommended but not required.
 
 >Example 2.6a - A switch statement with multiple cases including a fall-through
 
@@ -208,8 +189,7 @@ must contain a default case.
 
 #### 2.7 Ternary operator
 
-Ternary operators are sometimes useful in making code concise and readable. If
-possible, try to restrict ternary operations to single lines.
+Ternary operators are sometimes useful in making code concise and readable. If possible, try to restrict ternary operations to single lines.
 
 >Example 2.7a - acceptable ternary usage
 
@@ -223,23 +203,13 @@ Use either // or /* */, as long as you are consistent. // is much more common fo
 
 #### 3.1 Files
 
-The first line of every file shall indicate the start of the file; the last
-line should indicate the end.
+The first line of every file shall indicate the start of the file; the last line should indicate the end.
 
-Generally .h files will have a general overview of the code and how to use it.
-A .c file will contain more information specifically describing how the code
-operates or specific algorithms and how they were implemented. When making
-changes to code, document the change in your source code repository software
-or in a .txt file accompanying your source code, do not document the changes
-in .h or .c files.
+Generally .h files will have a general overview of the code and how to use it. A .c file will contain more information specifically describing how the code operates or specific algorithms and how they were implemented. When making changes to code, document the change in your source code repository softwareor in a .txt file accompanying your source code, do not document the changes in .h or .c files.
 
 #### 3.3 TODO
 
-Use TODO comments to document code that is in-progress, temporary, working but
-should be improved, or good enough but not perfect. TODOs should include the
-string TODO in all caps, followed by the name of the programmer who made the
-comment. TODO comments provide an easy and searchable way to document code
-you'd like to improve at a later time.
+Use TODO comments to document code that is in-progress, temporary, working but should be improved, or good enough but not perfect. TODOs should include the string TODO in all caps, followed by the name of the programmer who made the comment. TODO comments provide an easy and searchable way to document code you'd like to improve at a later time.
 
 >Example 3.3a - correct TODO comment usage
 
@@ -250,10 +220,7 @@ you'd like to improve at a later time.
 
 #### 4.1 Macros
 
-Macros shall always be encompassed by brackets. Many problems that arise from
-using macros are associated with not using brackets to encompass them. Macro
-use should be avoided whenever possible. If you need a macro-like
-functionality use inline functions instead.
+Macros shall always be encompassed by brackets. Many problems that arise from using macros are associated with not using brackets to encompass them. Macro use should be avoided whenever possible. If you need a macro-like functionality use inline functions instead.
 
 >Example 4.1a - A correctly formatted macro to return the maximum of two values
 
@@ -268,13 +235,7 @@ functionality use inline functions instead.
 
 #### 4.2 Magic numbers
 
-Magic numbers are arbitrary numbers in C files that are meaningless to anyone
-reading the code that isn't the original author. Magic numbers are forbidden.
-The only numbers allowed in C files are 0 or 1. In most cases 0 and 1 should
-be further defined as FALSE and TRUE to ensure code clarity. There can be
-exceptions to this rule, such as code specific to a piece of hardware, but
-generally all numbers should be defined in the header file associated with a
-specific C file.
+Magic numbers are arbitrary numbers in C files that are meaningless to anyone reading the code that isn't the original author. Magic numbers are forbidden. The only numbers allowed in C files are 0 or 1. In most cases 0 and 1 should be further defined as FALSE and TRUE to ensure code clarity. There can be exceptions to this rule, such as code specific to a piece of hardware, but generally all numbers should be defined in the header file associated with a specific C file.
 
 >Example 4.2a - Correct use of definition instead of a Magic number
 
@@ -282,11 +243,7 @@ specific C file.
 
 #### 4.3 Hardware-specific code
 
-All hardware specific definitions are to be in header files. Hardware specific
-code is strictly forbidden in .C files. Ideally you should have a single file
-defining all hardware interaction, though sometimes you will use imported
-libraries with their own associated hardware configuration. The only exception
-to this rule is for functions that initialize hardware.
+All hardware specific definitions are to be in header files. Hardware specific code is strictly forbidden in .C files. Ideally you should have a single file defining all hardware interaction, though sometimes you will use imported libraries with their own associated hardware configuration. The only exception to this rule is for functions that initialize hardware.
 
 >Example 4.3a - Correctly defining hardware
 
@@ -295,14 +252,7 @@ to this rule is for functions that initialize hardware.
 
 #### 4.4 Header files
 
-All C files should have an associated header file. The only exception would be
-special source files that contain your main function. Header files contain
-function prototypes, defines, macros, and the associated documentation on how
-to use the functions in the associated C file. Remember, documentation within
-header files explains how to use the functions and documentation in the C
-files explains how the code works. All header files will have #define guards
-to prevent multiple inclusions. The format of the symbol name should be
-FILENAME_H.
+All C files should have an associated header file. The only exception would be special source files that contain your main function. Header files contain function prototypes, defines, macros, and the associated documentation on how to use the functions in the associated C file. Remember, documentation within header files explains how to use the functions and documentation in the C files explains how the code works. All header files will have #define guards to prevent multiple inclusions. The format of the symbol name should beFILENAME_H.
 
 >Example 4.4a - #define guard for hardware_init.h
 
@@ -321,6 +271,5 @@ All boolean conditionals shall be encompassed by parenthesis to prevent operator
 
 #### 4.7 Consistency
 
-When working on code that follows a different style maintain the coding
-style of the code you are working on.
+When working on code that follows a different style maintain the coding style of the code you are working on.
 
