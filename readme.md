@@ -169,22 +169,30 @@ All code statements within if statements shall be encompassed by brackets even i
 
 #### 2.6 switch statements
 
-Switch statements are to have the case statements indented one level out from the switch. Fall-throughs must be clearly documented. A default case is recommended but not required.
+Switch statements are to have the case statements indented one level out from the switch. Each case will be enclosed in brackets. Fall-throughs must be clearly documented. A default case is recommended but not required.
 
 >Example 2.6a - A switch statement with multiple cases including a fall-through
 
     Switch (foo)
     {
        case bar1:    // comment  
+       {
            code…  
            break;  
-       case bar2:    // OMG FALL THROUGH  
+       }
+       case bar2:    // OMG FALL THROUGH
+       {
            code…  
+       }
        case bar3:    // comment  
+       {
            code…  
            break;  
-       case default:  
+       }
+       default:  
+       {
            break;
+       }
     }    // end switch foo
 
 #### 2.7 Ternary operator
